@@ -23,11 +23,18 @@
         android:inputType="textEmailAddress"/>
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"/>
+        android:hint="Name"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location"
+        android:inputType="textCapWords"/>
 
     <Button
         android:id="@+id/btnLogin"

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText etEmail, etPassword;
+    EditText etEmail, etName, etLocation;
     Button btnLogin;
 
     @Override
@@ -19,17 +19,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etEmail = findViewById(R.id.etEmail);
-        etPassword = findViewById(R.id.etPassword);
+        etName = findViewById(R.id.etName);
+        etLocation = findViewById(R.id.etLocation);
         btnLogin = findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(v -> {
 
-            Intent intent = new Intent(
+            Intent i = new Intent(
                     MainActivity.this,
                     DashboardActivity.class
             );
 
-            startActivity(intent);
+            i.putExtra("email", etEmail.getText().toString());
+            i.putExtra("name", etName.getText().toString());
+            i.putExtra("location", etLocation.getText().toString());
+
+            startActivity(i);
 
         });
     }

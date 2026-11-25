@@ -17,8 +17,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You have successfully logged in."
-        android:textSize="16sp"
+        android:text="Your Details"
+        android:textSize="18sp"
         android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/receiverTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Details"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
