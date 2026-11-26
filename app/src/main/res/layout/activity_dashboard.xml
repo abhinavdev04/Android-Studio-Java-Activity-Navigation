@@ -29,6 +29,14 @@
         android:textSize="18sp"
         android:layout_marginTop="20dp"/>
 
+    <EditText
+        android:id="@+id/etReturnData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter something to send back"
+        android:inputType="text"
+        android:layout_marginTop="25dp"/>
+
     <Button
         android:id="@+id/btnNavBack"
         android:layout_width="match_parent"

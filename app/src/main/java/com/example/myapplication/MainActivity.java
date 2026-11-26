@@ -1,4 +1,6 @@
+
 package com.example.myapplication;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -47,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
             if (data != null) {
 
-                String message = data.getStringExtra("message");
+                String returnedData = data.getStringExtra("returnedData");
 
                 Toast.makeText(
                         this,
-                        message,
-                        Toast.LENGTH_SHORT
+                        "From Dashboard: " + returnedData,
+                        Toast.LENGTH_LONG
                 ).show();
 
             }
