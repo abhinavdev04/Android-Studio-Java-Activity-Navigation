@@ -29,4 +29,11 @@
         android:textSize="18sp"
         android:layout_marginTop="20dp"/>
 
+    <Button
+        android:id="@+id/btnNavBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigate Back"
+        android:layout_marginTop="25dp"/>
+
 </LinearLayout>

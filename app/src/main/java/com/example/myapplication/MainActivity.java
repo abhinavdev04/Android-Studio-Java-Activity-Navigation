@@ -1,11 +1,11 @@
-
 package com.example.myapplication;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,8 +34,28 @@ public class MainActivity extends AppCompatActivity {
             i.putExtra("name", etName.getText().toString());
             i.putExtra("location", etLocation.getText().toString());
 
-            startActivity(i);
+            startActivityForResult(i, 2);
 
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 2 && resultCode == RESULT_OK) {
+
+            if (data != null) {
+
+                String message = data.getStringExtra("message");
+
+                Toast.makeText(
+                        this,
+                        message,
+                        Toast.LENGTH_SHORT
+                ).show();
+
+            }
+        }
     }
 }
